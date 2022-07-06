@@ -1,4 +1,14 @@
 import React from "react";
+import styled from 'styled-components'
+
+const Li = styled.li`
+list-style: none;
+border: 2px;
+padding: .5em;
+background-color: lightgrey;
+width: 7em;
+color: black;
+`
 
 const Item = ({ item, onItemClick }) => {
 
@@ -6,7 +16,7 @@ const Item = ({ item, onItemClick }) => {
         onItemClick(item)
     }
 
-    return <li onClick={handleClick}>{item.name} £{item.price}</li>
+    return <Li onClick={handleClick}>{item.name} £{item.price}</Li>
 
 }
 
